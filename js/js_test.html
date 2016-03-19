@@ -1,12 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<body>
-
-<h1>My First Web Page</h1>
-
-<script>
-document.write("<p>My First JavaScript</p>");
+<head>
+<script type="text/javascript">
+	function myFunction(){
+		var obj = document.getElementById("h01");
+		obj.innerHTML="hello world!";
+	}	
+	onload=myFunction;
 </script>
+</head>
 
+<body>
+<h1 id=h></h1>
 </body>
 </html>
