@@ -3,14 +3,20 @@
 <head>
 <script type="text/javascript">
 	function myFunction(){
+		/*定义方法 function + 方法名（）｛｝*/
 		var obj = document.getElementById("h01");
 		obj.innerHTML="hello world!";
+		/*方法内容
+		1、定义变量名并且获取id
+		2、方法具体内容
+		*/
 	}	
 	onload=myFunction;
+	/*加载函数*/
 </script>
 </head>
 
 <body>
-<h1 id=h></h1>
+<h1 id=h01></h1> <!-- 通过css选择器调用方法 --> 
 </body>
 </html>
