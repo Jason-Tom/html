@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+h3
+{
+color:red;
+text-align:left;
+font-size:8pt;
+}
+/*多重样式，分号隔开*/
+li strong {
+    font-style: italic;
+    font-weight: normal;
+  }
+  /*派生选择器，集合标签，简化书写，同时满足多个标签才能显示那里的效果*/
+</style>
+</head>
+
+<body>
+<p><strong>我是粗体字，不是斜体字，因为我不在列表当中，所以这个规则对我不起作用</strong></p>
+<ol>
+<li><strong>我是斜体字。这是因为 strong 元素位于 li 元素内。</strong></li>
+<li>我是正常的字体。</li>
+</ol>
+</body>
+</html>
