@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+<style type="text/css">
+.test
+{
+	width: 90px;
+	height: 50px;
+	background: red; 
+	/*结尾养成添加分号的习惯*/
+}
+.testtwo
+{
+	width: 90px;
+	height: 50px;
+	background: blue; 
+	padding: 9px;
+	/*加上内边框和外边框*/
+	margin: 9px;
+	/*结尾养成添加分号的习惯*/
+}
+.testthree
+{
+	width: 90px;
+	height: 50px;
+	background: green; 
+	padding: 1px;
+	/*结尾养成添加分号的习惯*/
+}
+.add 
+{
+		position:absolute;
+		left:100px;
+		top:150px;
+}
+</style>
+</head>
+
+<body>
+<div class="test add">asdfas</div>
+<!-- 两个样式叠加使用 -->
+
+<div class="test add">
+<!-- 可以对内部全部标签进行位置调整 -->
+<div class="testtwo">asdf</div>
+<div class="testthree">hhh</div>
+</div>
+</body>
+
+</html>
