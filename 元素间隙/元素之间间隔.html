@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button style="z-index:0;position: absolute;left: 0px;top: 0px;width: 60px;height: 20px;">aaaaa</button>
+	<button style="z-index:-1;position: absolute;left: 40px;top: 0px;width: 60px;height: 20px;">bbbbbb</button>
+	<!-- 通过绝对定位去除按钮之间间隔 -->
+
+	<button style="z-index:1;display: inline;margin: 0px;">asdfas</button>
+	<!-- 定位的情况下次能出现覆盖（默认定位也有定位），才能使用到z-index（值不要使用0） -->
+	</br>
+	<button style="display: block;">asdfas</button>
+	<!-- 转换成块级元素，从新行开始，不会在新建一行 -->
+	<button >asdfas</button>
+	<button >asdfas</button>
+
+	<h1 style="display: inline;">asdf</h1>
+	<!-- 转换成内联元素，就当成内敛元素使用 -->
+	<h1>asdf</h1>
+	<div>asdfa</div>
+	<div>asdfa</div>
+	<span>asdfas</span>
+	<!-- 内联元素元素之间有一个空格 -->
+	<span>asdfas</span>
+	adasf        asdfasd
+	<!-- 自由文本多个空格为一个 -->
+</body>
+</html>
