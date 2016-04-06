@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+    function bigImg(x) {
+        x.style.height = "180px";
+        x.style.width = "180px";
+        x.style.background ="green";
+    }
+
+    function normalImg(x) {
+        x.style.height = "128px";
+        x.style.width = "128px";
+    }
+    </script>
+
+    <style type="text/css">
+        .test{
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button onmousemove="bigImg(this)" onmouseout="normalImg(this)" class="test">asdfas</button>
+    <a href="#">asdfasd</a>
+</body>
+
+</html>

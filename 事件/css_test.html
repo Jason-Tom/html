@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+    button.mybutton:hover {
+        background-size: 30px;
+    }
+    
+    button.mybutton1:first-letter {
+        font-size: 200%;
+        color: #8A2BE2;
+    }
+    
+    input.myinput:focus {
+        background-color: blue;
+
+    }
+    </style>
+    <script>
+    function bigImg(x) {
+        x.style.height = "180px";
+        x.style.width = "180px";
+        x.style.color="green";
+    }
+
+    function normalImg(x) {
+        x.style.height = "128px";
+        x.style.width = "128px";
+    }
+    </script>
+</head>
+
+<body>
+    <button onmousemove="bigImg(this)" onmouseout="normalImg(this)" class="mybutton mybutton1">asdfas</button>
+    <a href="#">asdfasd</a>
+</body>
+
+</html>
