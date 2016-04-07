@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>光标溢出</title>
+    <style type="text/css">
+    input {
+        border-radius: 25px;
+        height: 30px;
+        width: 400px；
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: blue;
+        background-color: yellow;
+        outline-color: green;
+        border-color: pink;
+        box-shadow: 3px 3px 3px 3px gray;
+        text-shadow: 2px 2px 2px red;
+        text-align: right;
+
+    }
+    </style>
+</head>
+
+<body>
+    <input type="text" size="30" placeholder="aaa"></input>
+    <input type="text" size="30"  value=" test" height="25px" width="25px" style="position: absolute;left: 20px;top: 80px;"></input>
+    <input type="text" size="30" value=" " style="outline:medium;position: absolute;left: 20px;top: 130px;"></input>
+    <!-- 去掉外边框 -->
+    <input type="text" size="30" value=" " maxlength="10" minlength="2" style="outline:medium;position: absolute;left: 20px;top: 170px;padding-left:10px;padding-right:10px;"></input>
+    <!-- 设定最大字段，最小字段无法限定 -->
+    <!-- 使用空格保证从非0个位置开始，如何限定死 -->
+</body>
+
+</html>
