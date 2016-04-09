@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>show different input</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#one").click(function() {
+            $("div").show();
+        });
+        $("#two").click(function() {
+            $("div").hide();
+        });
+    });
+    // jquery方法是一层层嵌套的，不同于javascript
+    </script>
+    <style type="text/css">
+		.div{
+			
+		}
+    </style>
+</head>
+
+<body>
+<button id="one">one</button>
+<button id="two">two</button>
+    <div id=one class="show div">
+    	<div>
+    		<input type="text"></input>
+    	</div>
+    	<div>
+    		<input type="text"></input>
+    	</div>
+    	<div>
+    		<input type="text"></input>
+    	</div>
+    </div>
+</body>
+
+</html>
