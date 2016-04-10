@@ -1,0 +1,22 @@
+.div {
+    background-color: red;
+    position: absolute;
+    left: 0px;
+    top: 400px;
+}
+
+.div1 {
+    background-color: red;
+    > button {
+        background-color: pink;
+    }
+}
+
+.div2 {
+    position: absolute;
+    top: 30px;
+    > button {
+        width: 90px;
+        text-align: center;
+    }
+}
