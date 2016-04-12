@@ -1,5 +1,6 @@
 function divtest() {
-    document.getElementById("test").className = "two";
+    // document.getElementById("test").className = "two";
+    document.getElementById("test").innerHTML = "one";
     // alert("sdfsfsfs");
 }
 
@@ -20,4 +21,5 @@ function chance() {
     }
 
 }
-window.onresize = chance;
+window.onresize = chance ;
+window.onresize =  divtest;
