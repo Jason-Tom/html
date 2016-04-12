@@ -13,8 +13,8 @@ function chance() {
         document.getElementById("demo").className = "one";
         document.getElementById("demo").innerHTML = "one";
     } else if (document.body.clientWidth < 600) {
-        document.getElementById("demo").className = "two";
-        document.getElementById("demo").innerHTML = "two";
+        document.getElementById("demo").className = "four";
+        document.getElementById("demo").innerHTML = "four";
     } else {
         document.getElementById("demo").className = "three";
         document.getElementById("demo").innerHTML = "three";
@@ -22,4 +22,3 @@ function chance() {
 
 }
 window.onresize = chance ;
-window.onresize =  divtest;
