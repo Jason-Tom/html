@@ -10,12 +10,14 @@ function chance() {
     // clientWidth=document.body.clientWidth;
     if (document.body.clientWidth < 300) {
         document.getElementById("demo").className = "one";
-        document.getElementById("demo").innerHTML="one";
+        document.getElementById("demo").innerHTML = "one";
     } else if (document.body.clientWidth < 600) {
         document.getElementById("demo").className = "two";
-        document.getElementById("demo").innerHTML="two";
+        document.getElementById("demo").innerHTML = "two";
     } else {
         document.getElementById("demo").className = "three";
-        document.getElementById("demo").innerHTML="three";
+        document.getElementById("demo").innerHTML = "three";
     }
+
 }
+window.onresize = chance;
