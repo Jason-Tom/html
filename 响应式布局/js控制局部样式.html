@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="t2" style="color: yellow;border-radius: 25px;" >欢迎光临！</div>
+    <p>
+        <button onclick="setSize()">大小</button>
+        <button onclick="setColor()">颜色</button>
+        <button onclick="setbgColor()">背景</button>
+        <button onclick="setBd()">边框</button>
+    </p>
+    <script>
+    function setSize() {
+        document.getElementById("t2").style.fontSize = "30px";
+    }
+
+    function setColor() {
+        document.getElementById("t2").style.color = "red";
+    }
+
+    function setbgColor() {
+        document.getElementById("t2").style.backgroundColor = "blue";
+    }
+
+    function setBd() {
+        document.getElementById("t2").style.border = "3px solid #FA8072";
+    }
+    </script>
+</body>
+
+</html>
