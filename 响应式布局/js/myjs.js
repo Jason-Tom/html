@@ -1,4 +1,4 @@
 function divtest(){
-	// document.getElementById('test').className="two";
-	document.getElementById("test").innerHTML="My First JavaScript";
+	document.getElementById('test').className="two";
+	// alert("sdfsfsfs");
 }
