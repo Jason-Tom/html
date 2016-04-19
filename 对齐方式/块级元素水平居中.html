@@ -6,10 +6,13 @@
     <title>内联元素垂直居中</title>
     <style type="text/css">
     .one {
-        top: 50%;
-        position: absolute;
-        transform: translateY(-50%);
-        /* 这里我们使用css3的transform来达到类似效果 */
+        position: static;
+        background-color: pink;
+        width: 1300px;
+        text-align: center;
+        height: 400px;
+        display: table-cell;
+        vertical-align: middle;
         /*margin: 10px auto;*/
         /*加上auto 母板都会水平居中*/
     }
@@ -17,8 +20,9 @@
 </head>
 
 <body>
-    <div>
-        <img src="2.jpeg" class="one">
+    <div class="one">
+        <img src="2.jpeg">
+        <img src="2.jpeg">
     </div>
 </body>
 
