@@ -1,0 +1,97 @@
+﻿<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+    <script type="text/javascript" src="vue.js"></script>
+    <style>
+    body {
+        font-family: ".PingFang-SC-Regular", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    .nav-group {
+        cursor: pointer;
+        padding: 20px;
+        background: red;
+        color: white;
+        border-top: solid 1px darkred;
+    }
+    
+    .nav-item:hover,
+    .nav-group:hover {
+        background: black;
+    }
+    
+    .nav-item {
+        padding: 20px;
+        background: darkred;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div v-for="(gindex,group) in nav.data" @click="clickGroup(gindex)">
+            <div class="nav-group">{{group.title}}</div>
+            <div v-show="gindex == nav.selected">
+                <div class="nav-item" v-for="item in group.data" @click="clickItem(item)">
+                    {{item}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var navData = [{
+        title: '超人',
+        data: [
+            'sueperman服装',
+            'sueperman秋裤',
+            'sueperman内裤',
+            'sueperman内衣'
+        ]
+    }, {
+        title: '怪兽',
+        data: [
+            'monster服装',
+            'monster秋裤',
+            'monster内裤',
+            'monster内衣'
+        ]
+    }, {
+        title: '超女',
+        data: [
+            'supergirl服装',
+            'supergirl秋裤',
+            'supergirl内裤',
+            'supergirl内衣'
+        ]
+    }, {
+        title: '小胖',
+        data: [
+            '吃饭', '拉屎', 'haha'
+        ]
+    }]
+
+    var vueData = new Vue({
+        el: 'body',
+        data: {
+            nav: {
+                selected: -1,
+                data: navData
+            }
+        },
+        methods: {
+            clickGroup: function(gindex) {
+                if (this.nav.selected == gindex) this.nav.selected = -1;
+                else this.nav.selected = gindex;
+            },
+            clickItem: function(item) {
+                alert(item);
+            }
+        }
+    })
+    </script>
+</body>

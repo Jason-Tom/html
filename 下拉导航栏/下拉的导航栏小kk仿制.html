@@ -1,0 +1,93 @@
+﻿<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <style>
+    body {
+        font-family: ".PingFang-SC-Regular", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    .nav-group {
+        cursor: pointer;
+        padding: 20px;
+        background: red;
+        color: white;
+        border-top: solid 1px darkred;
+    }
+    
+    .nav-item:hover,
+    .nav-group:hover {
+        background: black;
+    }
+    
+    .nav-item {
+        padding: 20px;
+        background: darkred;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <div ng-repeat="x in data">
+            <h2 ng-click="titleClick($index)" style="cursor: pointer;">{{x.title}}</h2>
+            <div ng-if="isSelected == $index">
+                <div ng-repeat="(key,value) in x.data">
+                   {{key}} : {{value}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var navData = [{
+        title: '超人',
+        data: [
+            'sueperman服装',
+            'sueperman秋裤',
+            'sueperman内裤',
+            'sueperman内衣'
+        ]
+    }, {
+        title: '怪兽',
+        data: [
+            'monster服装',
+            'monster秋裤',
+            'monster内裤',
+            'monster内衣'
+        ]
+    }, {
+        title: '超女',
+        data: [
+            'supergirl服装',
+            'supergirl秋裤',
+            'supergirl内裤',
+            'supergirl内衣'
+        ]
+    }, {
+        title: '小胖',
+        data: [
+            '吃饭', '拉屎', 'haha'
+        ]
+    }]
+
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.data = navData;
+
+        $scope.isSelected = -1;
+        $scope.titleClick = function(index) {
+            if ($scope.isSelected != index) {
+                $scope.isSelected = index;
+            } else
+                $scope.isSelected = -1;
+        };
+
+
+    });
+    </script>
+</body>
