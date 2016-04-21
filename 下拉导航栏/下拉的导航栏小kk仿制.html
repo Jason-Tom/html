@@ -36,10 +36,15 @@
     <div ng-app="myApp" ng-controller="myCtrl">
         <div ng-repeat="x in data">
             <h2 ng-click="titleClick($index)" style="cursor: pointer;">{{x.title}}</h2>
+            <!-- 方法括号输入视图参数，供js方法计算 -->
             <div ng-if="isSelected == $index">
+                <!-- $index对应父级数组的索引 -->
                 <div ng-repeat="(key,value) in x.data">
-                   {{key}} : {{value}}
+                    <!-- 循环遍历的对象一定是数组对象，可以通过 . 号，辅助确定数组，数组里面还含有其他对象的，要通过 . 号访问区分开 -->
+                    {{key}} : {{value}}
+                    <!-- key是当前遍历对象的数组索引 -->
                 </div>
+                <!-- angulerjs的标签，是js，索引编号是随参数变化而变化的 -->
             </div>
         </div>
     </div>
@@ -85,9 +90,9 @@
                 $scope.isSelected = index;
             } else
                 $scope.isSelected = -1;
+            // 用于再次单击的时候缩回子导航栏
         };
-
-
+        // 控制器里面要对应好相应的方法和属性
     });
     </script>
 </body>
