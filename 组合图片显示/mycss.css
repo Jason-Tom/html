@@ -1,9 +1,14 @@
-img {
+.img {
     display: inline-block;
     width: 100px;
+    position: static;
 }
 
-div {
+.div {
     display: inline-block;
     width: 100%;
+}
+.span{
+	position: static;
+	/*默认static的位置布局不会叠加*/
 }
