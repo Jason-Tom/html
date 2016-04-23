@@ -1,12 +1,17 @@
 .img {
     display: inline-block;
     width: 600px;
+    height: 400px;
+    transition:all 1s ease-in-out 2s;
+    /*如果宽高没有限定，会默认全部属性一起变化*/
     position: absolute;
     /*position语句和具体位置放置没关系*/
     top: 0px;
     left: 0px;
 }
-
+.img:hover{
+	width: 800px;
+}
 .div {
     display: inline-block;
     width: 100%;
