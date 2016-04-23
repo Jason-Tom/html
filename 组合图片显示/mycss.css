@@ -1,14 +1,19 @@
 .img {
     display: inline-block;
-    width: 100px;
-    position: static;
+    width: 600px;
+    position: absolute;
+    /*position语句和具体位置放置没关系*/
+    top: 0px;
+    left: 0px;
 }
 
 .div {
     display: inline-block;
     width: 100%;
 }
-.span{
-	position: static;
-	/*默认static的位置布局不会叠加*/
+
+.span {
+    position: absolute;
+    top: 0px;
+    /*默认static（其他也是）的位置布局不会叠加，要通过强制位置定位才会叠加，两个都要定位*/
 }
