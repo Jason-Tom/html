@@ -1,23 +1,30 @@
 .img {
     display: inline-block;
-    width: 600px;
-    height: 400px;
-    transition:all 1s ease-in-out 2s;
+    width: 300px;
+    transition: all 1s ease-in-out 0s;
     /*如果宽高没有限定，会默认全部属性一起变化*/
     position: absolute;
     /*position语句和具体位置放置没关系*/
     top: 0px;
     left: 0px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 1px 1px gray, -1px 1px 1px 1px gray, 1px -1px 1px 1px gray, -1px -1px 1px 1px gray;
 }
-.img:hover{
-	width: 800px;
+
+.img:hover {
+    width: 800px;
 }
+
 .div {
     display: inline-block;
     width: 100%;
 }
 
 .span {
+    margin-left: 10px;
+    margin-top: 10px;
     position: absolute;
     top: 0px;
     /*默认static（其他也是）的位置布局不会叠加，要通过强制位置定位才会叠加，两个都要定位*/
