@@ -22,10 +22,15 @@
     width: 100%;
 }
 
-.span {
+.title {
     margin-left: 10px;
     margin-top: 10px;
     position: absolute;
     top: 0px;
     /*默认static（其他也是）的位置布局不会叠加，要通过强制位置定位才会叠加，两个都要定位*/
+}
+.hover{
+    display: flex;
+    /*默认垂直上首行、左对齐*/
+    /*justify-content: center;*/
 }
