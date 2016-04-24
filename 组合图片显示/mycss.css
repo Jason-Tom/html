@@ -22,6 +22,7 @@
     display: inline-block;
     width: 100%;
     background-color: pink;
+    height: 300px;
 }
 
 .title {
@@ -34,5 +35,6 @@
 .hover{
     display: flex;
     /*默认垂直上首行、左对齐*/
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
