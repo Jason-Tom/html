@@ -1,0 +1,6 @@
+body{
+  /*触发事件，有时要找到对应的*/
+  width: 1300px;
+  height: 600px;
+  background-color: yellow;
+}
