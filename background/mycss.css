@@ -1,0 +1,19 @@
+.box {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 300px;
+    /*height: 600px;*/
+    background-image: url(2.jpeg);
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    padding: 30px;
+    border: 10px dotted #000000;
+    background-color: rgb(255, 0, 0);
+    /*上下左右四个属性，还有百分比和像素定位*/
+    background-position: center;
+    background-size: cover;
+    /*origin使用之前要去掉位置固定,使用boder定位时，还要注意设定边界宽度*/
+    background-origin: padding-box;
+    /*切割的时候会把背景颜色一起切割*/
+    background-clip: content-box;
+}
