@@ -1,0 +1,28 @@
+.box{
+  background-color: blue;
+/*  width: 600px;
+  height: 300px;*/
+  position: relative;
+}
+.font{
+  color: rgb(255,0,0);
+  font-family: verdana;
+  font-size: 50px;
+}
+.fonttwo{
+  color: rgb(255,0,0);
+  /*字体名字加上双引号比较规范*/
+  /*多个字体是指根据系统选用字体，由前到后*/
+  font-family:'Algerian';
+  /*font-family:'Algerian';*/
+  font-size: 50px;
+}
+
+.fontthree{
+  color: #79e4ff;
+  /*继承父级字体样式,有些浏览器不支持*/
+  /*单引号和双引号很多情况下是等价的，放置混乱的时候会结合在一起用*/
+  font-family:"Edwardian Script ITC";
+  /*很多浏览器不支持inherit属性，直接基于默认值设定*/
+  font-size: 30px;
+}
