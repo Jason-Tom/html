@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css样式覆盖</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <style type="text/css" media="screen">
+    span {
+        background-color: yellow;
+    }
+    
+    #one {
+        background-color: black;
+    }
+    
+    .span {
+        background-color: red;
+    }
+    
+    .span6 {
+        background-color: yellow;
+    }
+    
+    .span5 {
+        background-color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span id="one" class="span1 span" style="background-color: pink;">
+      lalala
+    </span>
+        <!-- class里面的样式放置顺序是看实际顺序的 -->
+        <span id="" class="span6 span5 ">
+      hahaha
+    </span>
+        <span id="" style="background-color: yellow;background-color: green;">
+      gagaga
+    </span>
+        <!-- 和外置的class放置顺序，知只是一个导入链接，要看实际的css样式顺序 -->
+        <span id="" class="span span1">
+      xixixi
+    </span>
+    <!-- .css文件里面也是看实际css类放置顺序，同样等级的看放置顺序，important也是 -->
+    <span id="" class="span2 span7">
+      oooooo
+    </span>
+    </div>
+</body>
+
+</html>

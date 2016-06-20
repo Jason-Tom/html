@@ -1,0 +1,25 @@
+.box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 600px;
+    background-color: yellow;
+}
+
+
+/*1、直接控制 2、通过子元素进一步控制交叉轴 3、细分模块继续划分*/
+
+.item {
+    /*只能控制交叉走=轴*/
+    align-self: flex-end;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+}
+
+.item:nth-child(2) {
+    /*align-self: center;*/
+}

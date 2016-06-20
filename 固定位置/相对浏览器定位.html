@@ -1,14 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>相对浏览器定位</title>
+    <style type="text/css">
+    body {
+        background-color: #ff002a;
+    }
+    
+    .one {
+      /*absolute是相对于浏览器界面定位，会出现覆盖的情况，但是嵌套非static的时候会出现嵌套div定位，实际位置不在*/
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .two {
+        display: inline-block;
+        position: absolute;
+        background-color: yellow;
+        top: 20px;
+        left: 20px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .three {
+        display: inline-block;
+        
+      /*relative是相对于当前正常位置进行定位，也会出现覆盖情况，嵌套非static的时候会出现嵌套div定位,实际位置还在*/
+        position: relative;
+        background-color: green;
+        top: 20px;
+        left: 20px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .four {
+        position: absolute;
+        background-color: pink;
+        word-break: break-all;
+        overflow: visible;
+        top: 20px;
+        left: 20px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .five {
+        position: relative;
+        background-color: yellow;
+        top: 20px;
+        left: 20px;
+        width: 500px;
+        height: 500px;
+    }
+    </style>
 </head>
+
 <body>
-<!-- 	<div style="background-color: blue;height: 1900px;width: 343px;position: absolute;">
-		萨芬都是短发
-	</div> -->
-	<div style="background-color: pink;height: 1900px;width: 123px;position: fixed;left: 500px;">asdfas</div>
-	<div style="background-color: pink;height: 1900px;width: 123px;position: relative;left: 900px;">asdfas</div>
+    <div class="one">
+        aaa
+        <div class="two">
+            bbbbb
+            <div class="three">
+                ccccccc
+                <div class="four">dddddddddd</div>
+            </div>
+        </div>
+
+    </div>
+     <div style="word-break: break-all">asdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafaasdfasdfafa</div>
+    <div class="five">
+    </div>
 </body>
+
 </html>

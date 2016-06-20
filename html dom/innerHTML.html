@@ -1,0 +1,48 @@
+﻿<html>
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>你好世界!</p>
+    <p id="intro">Hello World!</p>
+    <p class="intro" style="font-size: 30px; ">Hello</p>
+    <script>
+    // 改变元素文本值（双标签元素）
+    // byid直接改变原来的值
+    var txt = document.getElementById("intro");
+    txt.innerHTML = 'lalala';
+    console.log(txt.nodeValue);
+    console.log(txt.attributes);
+    console.log(txt.getAttributeNode("id"));
+    console.log(txt.nodeName);
+    console.log(txt.nodeType);
+    // 不会改变原来的
+    x = document.getElementsByCla
+    ssName("intro");
+    x[0].innerHTML = 'xixixi '
+    document.write(x[0].innerHTML);
+    var x = document.getElementById("main");
+
+    // 不会改变原来的
+    var k = document.getElementsByTagName('p');
+    k[0].innerHTML = 'hahaha';
+    document.write(k[0].innerHTML);
+
+    var k = document.getElementsByTagName('p');
+    k[2].style.color = 'red';
+
+    var para = document.createElement("p");
+    var node = document.createTextNode("这是一个新段落。");
+    para.appendChild(node);
+
+    var element = document.getElementById("intro");
+    element.appendChild(para);
+    // 用构造函数安全点
+    document.getElementById("intro").onclick = function() {
+        alert('lalala')
+    };
+    // 访问html dom文本节点方法innerhtml nodevalue
+    </script>
+</body>
+
+</html>
