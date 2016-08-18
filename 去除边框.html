@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>复合input框</title>
+    <style type="text/css" media="screen">
+    .input {
+        border: 0px;
+        /*border: none;*/
+        /*去除选中前的边框，去除的是实际边框*/
+        /*outline: blue solid 3px;*/
+        /*实际上不占宽度，只是做做样子和border的区别*/
+        outline: 0px;
+        /*outline: none;*/
+        /*去除选中后的边框*/
+    }
+    
+    .textarea {
+        border: 0px;
+        /*outline: 0px;*/
+    }
+    
+    .span {
+        /*border: 0px;*/
+        outline: 0px;
+        /*看情况配合使用*/
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="">去除input边框</span>
+        <input class="input" type="text" name="">
+    </div>
+    <div>
+        <textarea class="textarea" name="">去除textarea边框</textarea>
+    </div>
+    <div>
+        <span class="span" name="">去除span边框</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-size: 14px;
+}
+
+body,
+button,
+input,
+txt {
+    font-family: "Microsoft YaHei", "Hiragino Sans GB";
+}
+
+.top {
+    width: 100%;
+    height: 110px;
+    /*background-color: green;*/
+    /*background: url(../img/shadow.jpg) repeat-x bottom;*/
+}
+
+.top_bar {
+    /*margin-top: 33px;*/
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+    height: 76px;
+    /*background-color: green;*/
+}
+
+.top_bar_left {
+    /*background-color: yellow;*/
+    float: left;
+}
+
+.top_bar_left_item {
+    display: inline-block;
+}
+
+.top_bar_logo {
+    width: 160px;
+    /*margin-top: 31px;*/
+}
+
+.top_bar_left_item_text {
+    font-size: 18px;
+    color: #000;
+    border-left: solid 1px #bbb;
+    margin-left: 25px;
+    padding-left: 25px;
+    /*margin-top: 34px;*/
+}
+
+.top_bar_right {
+    /*background-color: red;*/
+    float: right;
+}
+
+._rang {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.top_bar_right_please {
+    font-size: 16px;
+    color: #999;
+}
+
+a.top_bar_right_link {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 4px;
+}

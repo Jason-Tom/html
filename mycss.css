@@ -1,0 +1,9 @@
+    div {
+        background-image: url(shadow.jpg);
+        background-repeat: repeat;
+        background-attachment: fixed;
+        /*兼容*/
+        background-position: center;
+        /*background: url(2.jpeg) repeat-x center;*/
+        /*缩写*/
+    }

@@ -1,0 +1,3 @@
+/favicon.ico
+
+ http://statics.dnspod.cn/proxy_favicon/_/favicon?domain= + ÍøÖ·

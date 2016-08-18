@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>内联元素垂直居中</title>
+    <title>块级元素垂直水平居中</title>
     <style type="text/css">
     .one {
         position: static;
@@ -13,8 +13,13 @@
         height: 400px;
         display: table-cell;
         vertical-align: middle;
+        /*a要在父级元素上添加，会设定该元素为line-block元素，需要强制设定大小*/
         /*margin: 10px auto;*/
         /*加上auto 母板都会水平居中*/
+        /*上下margin相等（过量相等）不能实现水平居中，pangdding也是不行*/
+        /*    display: flex;
+    justify-content: center;
+    align-items: center; 使用弹性布局，但是兼容性不好*/
     }
     </style>
 </head>
