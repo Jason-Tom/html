@@ -8,7 +8,7 @@
     .one {
         background-color: green;
         width: 100%;
-        height: 500px;
+        height: 0px;
         /*text-align: center;*/
         /*里面元素统一为非block元素，在统一在父级div使用text-align: center left right;实现左中右对齐 */
     }
@@ -17,19 +17,53 @@
         background-color: lightblue;
         /*display: inline;*/
     }
+    
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden
+    }
+    
+    .clearfix {
+        *+height: 1%;
+    }
+    
+    .middle {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    <div class="clearfix"> <div class="floated"></div> </div> .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    
+    * html .clearfix {
+        height: 1%;
+    }
     </style>
 </head>
 
 <body>
-    <div class="one">
-        <div class="two">
-            <div style="width: 100px;height: 100px;background-color: blue;float: right;">2123311231</div>
-            <!-- 多个元素左右对齐的话，先确定左右方向的，放在最先，其他依次排序 -->
-            <!-- 只有左右没有居中对齐 -->
-            <!-- 统一将元素转换成块元素来实现 -->
-            <span style="">lalala</span>
-            <div style="width: 100px;height: 100px;background-color: yellow;display: inline-block;float: right;">2123311231</div>
-            <img src="2.jpeg" alt="" style="width: 300px;">
+    <!-- <div class="one clearfix" style="width: 100%;height: 200px;"> -->
+    <div class="one clearfix" style="width: 100%;height: 100%;">
+        <img class="middle" src="2.jpeg" alt="" style="width: 300px;float: left">
+        <img src="2.jpeg" alt="" style="width: 800px;float: right">
+        <!-- <img src="2.jpeg" alt="" style="width: 300px;"> div -->
+        <!-- <img src="2.jpeg" alt="" style="display: block"> -->
+    </div>
+    <!-- 清除浮动，不然会嵌套进去 -->
+    <!-- div -->
+    <img src="2.jpeg" alt="" style="width: 300px;display: block;">
+    <!-- 要有高度才能撑开 -->
+    <div style="width: 100%;height: 600px;background-color: green">
+        <div class="middle" style="width: 100px;height: 100px;background-color: blue">
         </div>
     </div>
 </body>

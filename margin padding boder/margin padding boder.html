@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>margin padding boder</title>
+    <style type="text/css" media="screen">
+    .one {
+        width: 100%;
+        height: 600px;
+        background-color: pink;
+        text-align: center;
+    }
+    
+    .two {
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+        display: inline-block;
+    }
+    
+    .three {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        /*border: 50px solid red;*/
+        /*会根据基点展开*/
+        padding: 500px;
+        /*会根据基点展开，把自己撑大*/
+    }
+    
+    .four {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        margin: 100px;
+        /*外面扩大，会根据基点展开，自己大小不变*/
+    }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two">
+            <div class="four">
+                艾丝凡
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

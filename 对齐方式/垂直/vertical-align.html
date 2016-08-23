@@ -1,0 +1,48 @@
+﻿<html>
+
+<head>
+    <style type="text/css">
+    .box {
+        width: 500px;
+        height: 500px;
+        background-color: green;
+        /*display: inline-block;*/
+        /*父级元素是什么不重要，主要是要有高度*/
+        /*子元素要是可变元素（相对于文本进行对齐），块级元素把上下的内联元素当成块级元素进行对齐*/
+    }
+    
+    .top {
+        /*vertical-align: text-top*/
+        /*vertical-align: baseline*/
+        /*vertical-align: sub*/
+        /*vertical-align: super*/
+        /*vertical-align: top*/
+        /*vertical-align: text-top*/
+        /*vertical-align: bottom  */
+        /*vertical-align: text-bottom  */
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        /*display: inline-block;*/
+    }
+    img{
+      width: 300px;
+      height: 200px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <p>
+        这是一幅<img class="top" border="0" src="2.jpeg" />位于段落中的图像。
+    </p> -->
+    <div class="box">asdfasd
+        <div class="top">
+        </div>asdfas
+        <div class="top">
+            <img src="2.jpeg" alt="">
+        </div>
+</body>
+
+</html>

@@ -7,7 +7,7 @@
     <style type="text/css">
     .is-Transformed {
         /*position: absolute;*/
-        position: relative;
+        position: absolute;
         top: 50%;
         /*left: 50%;*/
         /*        margin-left: -150px;
@@ -18,19 +18,22 @@
     }
     
     .Table-Cell {
-        position: relative;
+        position: absolute;
+        top: 400px;
+        height: 200px;
         background-color: green;
         width: 700px;
         height: 700px;
+        display: block;
     }
     </style>
 </head>
 
 <body>
-    <div class="Table-Cell">
+    <a class="Table-Cell">
         <div class="is-Transformed" style="background-color: yellow;width: 100px;height: 100px;">
         </div>
-    </div>
+    </a>
 </body>
 
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style type="text/css" media="screen">
+    .one {
+        position: relative;
+        top: 10px;
+        left: 30px;
+        /*影响定位的方式就是原来的位置和static一样*/
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+    
+    .two {
+        position: absolute;
+        /*没写top、left的时候，定位方式默认和static一样,有一方设定机会打破默认*/
+        top: 50px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="two">
+        <div class="one">
+        </div>
+    </div>
+    <div class="one">
+    </div>
+    <!-- 绝对定位影响定位的方式，static和relative不再absolution里面，absolution不会对齐基点定位产生影响 -->
+</body>
+
+</html>

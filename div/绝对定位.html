@@ -1,49 +1,50 @@
 ﻿<html>
+
 <head>
-<style type="text/css">
-.test
-{
-	width: 90px;
-	height: 50px;
-	background: red; 
-	/*结尾养成添加分号的习惯*/
-}
-.testtwo
-{
-	width: 90px;
-	height: 50px;
-	background: blue; 
-	padding: 9px;
-	/*加上内边框和外边框*/
-	margin: 9px;
-	/*结尾养成添加分号的习惯*/
-}
-.testthree
-{
-	width: 90px;
-	height: 50px;
-	background: green; 
-	padding: 1px;
-	/*结尾养成添加分号的习惯*/
-}
-.add 
-{
-		position:absolute;
-		left:100px;
-		top:150px;
-}
-</style>
+    <style type="text/css">
+    .one {
+        width: 900px;
+        height: 500px;
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        background: red;
+    }
+    
+    .two {
+        /*        width: 90px;
+        height: 50px;*/
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        background: yellow;
+        /*z-index: 12;*/
+    }
+    
+    .three {
+        width: 90px;
+        height: 50px;
+        position: absolute;
+        /*relative是相对正常位置进行相对移动*/
+        /*absotion是相对于上级进行绝对定位*/
+        left: 50px;
+        top: 0px;
+        /*left、top等没了position就不起作用*/
+        background: green;
+        /*z-index: 1;*/
+    }
+    </style>
 </head>
 
 <body>
-<div class="test add">asdfas</div>
-<!-- 两个样式叠加使用 -->
-
-<div class="test add">
-<!-- 可以对内部全部标签进行位置调整 -->
-<div class="testtwo">asdf</div>
-<div class="testthree">hhh</div>
-</div>
+    <div class="one">
+        <!-- 基点标签要有大小 -->
+        <!-- <div class="two">
+        </div> -->
+        <span class="two">asdfsadfasfa</span>
+        <div class="three">
+        </div>
+    </div>
 </body>
 
 </html>

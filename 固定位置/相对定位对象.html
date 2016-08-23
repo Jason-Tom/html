@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/mycss.css"> -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/myjs.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function($) {
+
+    });
+    </script>
+    <style type="text/css" media="screen">
+    .middle_left_items {
+        display: block;
+        position: absolute;
+        /*相对于父级来进行定位，定位方式和static不一样*/
+        width: 400px;
+        height: 54px;
+        text-align: left;
+        border: solid 1px #ddd;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="middle_left_items">
+        <div style="background-color: blue;width: 100px;height: 100px;">
+        </div>
+    </div>
+    <div id="" style="position:absolute;left: 300px;height: 300px;">
+        <div class="middle_left_items" style="background-color: yellow;width: 200px;height: 200px;">
+        </div>
+    </div>
+</body>
+
+</html>

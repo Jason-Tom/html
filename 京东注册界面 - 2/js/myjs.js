@@ -1,42 +1,23 @@
 $(document).ready(function($) {
-    $("#lalala").mouseover(function(event) {
-        $("#lalala").attr({
+    $("#research").mouseover(function(event) {
+        $("#research").attr({
             src: 'img/dc1.png'
         });
     });
-    $("#lalala").mouseout(function(event) {
-        $("#lalala").attr({
+    $("#research").mouseout(function(event) {
+        $("#research").attr({
             src: 'img/grey_build.png'
         });
     });
-    $("#inp_one").focus(function() {
-        $("#info_one").css("opacity", "1");
+    $("#middle_left_items_click").click(function() {
+        $("#middle_left_items_input").focus();
+        // $("#middle_left_items_text").css("opacity", "0");
+        $("#middle_left_items_text").hide();
+        $("#middle_left_items_alert").css("opacity", "1");
     });
-    $("#inp_one").blur(function() {
-        $("#info_one").css("opacity", "0");
-    });
-    $("#inp_two").focus(function() {
-        $("#info_two").css("opacity", "1");
-    });
-    $("#inp_two").blur(function() {
-        $("#info_two").css("opacity", "0");
-    });
-    $("#inp_three").focus(function() {
-        $("#info_three").css("opacity", "1");
-    });
-    $("#inp_three").blur(function() {
-        $("#info_three").css("opacity", "0");
-    });
-    $("#inp_four").focus(function() {
-        $("#info_four").css("opacity", "1");
-    });
-    $("#inp_four").blur(function() {
-        $("#info_four").css("opacity", "0");
-    });
-    $("#inp_five").focus(function() {
-        $("#info_five").css("opacity", "1");
-    });
-    $("#inp_five").blur(function() {
-        $("#info_five").css("opacity", "0");
+    $("#middle_left_items_input").blur(function() {
+        // $("#middle_left_items_text").css("opacity", "1");
+        $("#middle_left_items_text").show();
+        $("#middle_left_items_alert").css("opacity", "0");
     });
 });
